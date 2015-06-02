@@ -12,10 +12,10 @@ void adc_configure(){
  RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1,ENABLE);//The ADC1 is connected the APB2 peripheral bus thus we will use its clock source
  RCC_AHB1PeriphClockCmd(RCC_AHB1ENR_GPIOCEN,ENABLE);//Clock for the ADC port!! Do not forget about this one ;)
  //Analog pin configuration
- GPIO_initStructre.GPIO_Pin = GPIO_Pin_0;//The channel 10 is connected to PC0
+ GPIO_initStructre.GPIO_Pin = GPIO_Pin_7;//Audio ADC - PA7
  GPIO_initStructre.GPIO_Mode = GPIO_Mode_AN; //The PC0 pin is configured in analog mode
  GPIO_initStructre.GPIO_PuPd = GPIO_PuPd_NOPULL; //We don't need any pull up or pull down
- GPIO_Init(GPIOC,&GPIO_initStructre);//Affecting the port with the initialization structure configuration
+ GPIO_Init(GPIOA,&GPIO_initStructre);//Affecting the port with the initialization structure configuration
  //ADC structure configuration
  ADC_DeInit();
  ADC_init_structure.ADC_DataAlign = ADC_DataAlign_Right;//data converted will be shifted to right
