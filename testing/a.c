@@ -1,4 +1,4 @@
-#include "stm32f4xx_adc.h"
+/*#include "stm32f4xx_adc.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
  
@@ -41,4 +41,4 @@ int main(void){
     while(1){//loop while the board is working
      ConvertedValue = adc_convert();//Read the ADC converted value
     }
-}
+}*/
